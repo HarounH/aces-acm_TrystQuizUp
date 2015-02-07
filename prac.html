@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script>
+         var answera='A';
+         var answerb='B';
+         var answerc='C';
+         var answerd='D';
+      	$(document).ready(function(){ 
+   		$("#A").click(function(){ 
+   			$('#A').hide();
+   			$('#B').hide();
+   			$('#C').hide();
+   			$('#D').hide();
+         $.post(url,answera,function(data,status){
+                           var newText;
+                           newText=data;
+                           $.('#stage').innerHTML = newText;
+                           $('#E').show();
+                   } )
+            } )  ;
+   		$("#B").click(function(){ 
+   			$('#A').hide();
+   			$('#B').hide();
+   			$('#C').hide();
+   			$('#D').hide();
+            $.post(url,answerb,function(data,status){
+                     
+                           var newText;
+                           newText=data;
+                           $.('#stage').innerHTML = newText;
+                           $('#E').show();
+                   } )
+			 } )  ;
+		$("#C").click(function(){ 
+   			$('#A').hide();
+   			$('#B').hide();
+   			$('#C').hide();
+   			$('#D').hide();
+            $.post(url,answerc,function(data,status){
+                           var newText;
+                           newText=data;
+                           $.('#stage').innerHTML = newText;
+                           $('#E').show();
+                   } )
+			 } )  ;
+		$("#D").click(function(){ 
+   			$('#A').hide();
+   			$('#B').hide();
+   			$('#C').hide();
+   			$('#D').hide();
+   		
+            $.post(url,answerd,function(data,status){
+                     
+                           var newText;
+                           newText=data;
+                           $.('#stage').innerHTML = newText;
+                           $('#E').show();
+                   } )
+			 } ) ;
+  		$("#E").click(function(){
+  			$('#A').show();
+   			$('#B').show();
+   			$('#C').show();
+   			$('#D').show();
+   			$('#E').hide();
+  		}) });
+  
+</script>
+<style type="text/css">
+#E {
+display: none;
+}
+</style>
+</head>
+<body>
+   
+   <div id="stage" style="background-color:white;">
+          Your Answer
+   </div>
+   <input type="button" id="A" value="A" >
+   <input type="button" id="B" value="B" >
+   <input type="button" id="C" value="C" >
+   <input type="button" id="D" value="D" >
+   <input type="button" id="E" value="Yes" >
+</body>
+</html>
