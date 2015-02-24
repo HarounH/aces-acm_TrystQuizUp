@@ -1,0 +1,35 @@
+#primary{
+    height:150px;
+    width:500px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:75px;
+}
+
+body{
+  background: url("2.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.button1{
+  background-color: rgb(0,0,200);
+}
+
+.button2{
+  background-color: rgb(200,0,0);
+}
+
+.button3{
+  background-color: rgb(0,200,0);
+}
+
+.button4{
+  background-color: rgb(200,200,0);
+}
+
+.jumbotron{
+  margin-top:30px;
+}

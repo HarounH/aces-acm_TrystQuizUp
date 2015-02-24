@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+		
+		var timer;
+		function timeOut(){
+			timer = setTimeout(timeOut , 500);
+			$.post("polling.php",
+				{id:window.name},
+				function(data,status){
+					if(data=="no"){
+			  //enable the buttons
+			  	$(".option").removeClass('btn-disabled');
+			  	$(".option").attr('disabled', 'disabled');
+			  	$(".option").prop('disabled', true);
+			}
+			else{
+				//disable the buttons
+					$(".option").addClass('btn-disabled');
+					$(".option").attr('disabled', 'disabled');
+					$(".option").prop('disabled', false);
+					}
+				});
+		}
+
+		
+		$(document).ready(function(){
+			timer = setTimeout(timeOut , 500);
+			$(".option").click(function(){
+				$(".option").addClass('btn-disabled');
+				$(".option").attr('disabled', 'disabled');
+				$(".option").prop('disabled', true);
+				$.post("reply.php",
+					{answer:this.id,
+					id:$("#userID").val()},
+					function(data,status){
+						console.log(data);
+						$("#stage").html("<p>"+"Received"+"</p>");
+					}
+					);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<button id="primary" type="button" class="btn btn-primary btn-lg option button1"><h1>A</h1></button>
+			</div>
+			<div class="col-sm-6">
+				<button id="primary" type="button" class="btn btn-danger btn-lg option button2"><h1>B</h1></button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<button id="primary" type="button" class="btn btn-success btn-lg option button3"><h1>C</h1></button>
+			</div>
+			<div class="col-sm-6">
+				<button id="primary" type="button" class="btn btn-warning btn-lg option button4"><h1>D</h1></button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
