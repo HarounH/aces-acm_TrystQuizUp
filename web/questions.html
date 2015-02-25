@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="mystyle3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){ 
+			var x=1;
+		 	$("#nextqs").click(function(){ //send signal to polling.php and ask nextquestion and options from question.php
+			  	$.post("questions.php",
+			  		{qnum:x},
+			  		function(data,status)
+			  		{
+			  			var obj = jQuery.parseJSON(data);
+			  			$("#qstage").html(obj.question);
+			  			$("#opta").html("A . " + obj.A);
+			  			$("#optb").html("B . " + obj.B);
+			  			$("#optc").html("C . " + obj.C);
+			  			$("#optd").html("D . " + obj.D);
+			  		});
+			  	x=x+1;
+			  	$.post("enable.php",
+			  		{task:"changepoll"},
+			  		function(data,status)
+			  		{
+					//do nothing with the received data
+				});
+		  	});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="jumbotron">
+			<center><font size="6" id="qstage" align="center">This is where the question will appear once we start and you have to decide the correct answer</font></center> 
+		</div>
+
+		<ol class="a">
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-4">
+					<font id="opta" size="6"><li>Option A</li></font>
+				</div>
+				<div class="col-md-5">
+					<font id="optb" size="6"><li>Option B</li></font>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-4">
+					<font id="optc" size="6"><li>Option C</li></font>
+				</div>
+				<div class="col-md-5">
+					<font id="optd" size="6"><li>Option D</li></font>
+				</div>
+			</div>
+		</ol>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-12" align="center">
+				<button id="nextqs" type="button" class="btn btn-primary btn-lg option button1"><i class="fa fa-sign-in"></i>     Next Question</button>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

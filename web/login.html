@@ -20,9 +20,10 @@
 					{
 						console.log(data);
 						if(data.localeCompare("success")===0){
-							var text =$('#userID').val();
-							var w = window.open ('test.html','_self',false);
-							w.getElementByID('userID').val(text);
+							//var text =$('#userID').val();
+							//var w = window.open ('test.html','_self',false);
+							//w.getElementById('userID').val(text);
+							login();
 						}
 						else{
 							$("#stage").html("Wrong login ID, Please try again.");

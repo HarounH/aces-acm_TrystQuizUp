@@ -1,0 +1,19 @@
+#primary{
+    height:100px;
+    width:350px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:50px;
+}
+
+body{
+  background: url("4.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ol.a{
+  list-style-type: upper-alpha;
+}
