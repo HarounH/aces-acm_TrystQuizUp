@@ -33,15 +33,13 @@
 
 		
 		$(document).ready(function(){
-								alert(window.name);
-
 			timer = setTimeout(timeOut , 500);
 			$(".option").click(function(){
 				$(".option").addClass('btn-disabled');
 				$(".option").attr('disabled', 'disabled');
 				$(".option").prop('disabled', true);
 				$.post("reply.php",
-					{answer:this.id,
+					{answer:this.name,
 					id:window.name},
 					function(data,status){
 						console.log(data);
@@ -61,18 +59,18 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-6">
-				<button id="primary" type="button" class="btn btn-primary btn-lg option button1"><h1>A</h1></button>
+				<button id="primary" name="A" type="button" class="btn btn-primary btn-lg option button1"><h1>A</h1></button>
 			</div>
 			<div class="col-sm-6">
-				<button id="primary" type="button" class="btn btn-danger btn-lg option button2"><h1>B</h1></button>
+				<button id="primary" name="B" type="button" class="btn btn-danger btn-lg option button2"><h1>B</h1></button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
-				<button id="primary" type="button" class="btn btn-success btn-lg option button3"><h1>C</h1></button>
+				<button id="primary" name="C" type="button" class="btn btn-success btn-lg option button3"><h1>C</h1></button>
 			</div>
 			<div class="col-sm-6">
-				<button id="primary" type="button" class="btn btn-warning btn-lg option button4"><h1>D</h1></button>
+				<button id="primary" name="D" type="button" class="btn btn-warning btn-lg option button4"><h1>D</h1></button>
 			</div>
 		</div>
 	</div>

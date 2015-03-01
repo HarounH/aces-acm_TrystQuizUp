@@ -1,75 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="mystyle2.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-
-  
-
-      function timeOut(){//score.php yet to be made
-        $.post("score.php",
-          {givemescores:"scores?"},
-          function(data,status){
-            //update the scores
-      });
-    }  
-    function isready(){
-      var timer = setTimeout(timeOut(), 50000);
-      clearTimeout(timer);
-      isready();
-    }
-    isready();
-    });
-  </script>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="mystyle2.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
 
 
+		var timer;
+		function timeOut(){
+			timer = setTimeout(timeOut , 1000);
+			$.post("scores.php",
+				{getscores:"scores"},
+				function(data,status){
+					var obj = jQuery.parseJSON(data);
+					console.log(data);
+					//alert(obj[1]);
+					var x=1;
+					$("#ranks").html("");
+					while(x<=obj.length)
+					{
+						var row = "<tr><th>"+x+"</th>"+
+										"<td>"+obj[x-1][0].toString()+"</td>"+
+										"<td>"+obj[x-1][1]+obj[x-1][2]+"</td>"+
+										"<td>"+obj[x-1][3]+"</td></tr>";
+						$("#ranks").append(row);
+						x=x+1;
+					}
+
+			});
+		}
+
+		$(document).ready(function(){
+			timer = setTimeout(timeOut , 1000);
+		});
+	</script>
 
 
-  </head>
 
-  <body>
-    <div class="container">
-      <h1 align ="center">Score Sheet</h1>
-      <br>
-      <br>
-      <div class="table-responsive">                                    
-      <table class="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>User ID</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Anna</td>
-            <td>23</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Debbie</td>
-            <td>432</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>John</td>
-            <td>74</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 align ="center">Score Sheet</h1>
+			<br>
+			<br>
+			<div class="table-responsive">                                    
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Rank</th>
+						<th>User ID</th>
+						<th>Name</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody id="ranks">
+				</tbody>
+			</table>
+		</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
 
 </html>
 

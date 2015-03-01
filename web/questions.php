@@ -34,32 +34,13 @@
 	}
 	function getQuestion($data, $conn)
 	{
-		$getQues="SELECT * FROM Questions WHERE id=".$data['qnum'];
+		$setCurrQues="UPDATE Questions SET current=1 where id=".$data['qnum'];
+		$setRestQues="UPDATE Questions SET current=0 where id!=".$data['qnum'];
+		$conn->query($setCurrQues);
+		$conn->query($setRestQues);
+		$getQues="SELECT question, A, B, C, D FROM Questions WHERE id=".$data['qnum'];
 		$result=$conn->query($getQues);
 		$row=$result->fetch_assoc();
 		echo json_encode($row);
 	}
-	/*if($_SERVER['REQUEST_METHOD']=="POST")
-	{
-		//check($conn);
-		
-		
-		if($_POST["qs"]==true)
-		{
-			
-			$getem="SELECT num FROM indexq LIMIT 1";
-			$res=$conn->query($getem);
-			$rowd=$res->fetch_assoc();
-			$getUserData="SELECT * FROM Questions WHERE id={$rowd["num"]}";
-			$result=$conn->query($getUserData);
-			$row=$result->fetch_assoc();
-			echo json_encode($row);
-			$xxx=$rowd["num"]+1;
-			$gett="UPDATE indexq SET num={$xxx}";
-			$pet=$conn->query($gett);
-
-		}
-		//$conn->close();
-	}*/
-		
 ?>

@@ -26,6 +26,8 @@
 		$data['id']=test_input($_POST['id']);
 		$data['answer']=test_input($_POST['answer']);
 		enable($data, $conn);
+		updateScore($data, $conn);
+		$conn->close();
 	}
 
 	function test_input($data)
@@ -37,9 +39,21 @@
 	}
 	function enable($data,$conn)
 	{
-		$status="yes";
 		$disableButton="UPDATE Members SET button_status=0 where id=".$data['id'];
 		$result=$conn->query($disableButton);
-		$conn->close();
+	}
+	function updateScore($data,$conn)
+	{
+		$getCurrQues="SELECT correct_option, points FROM Questions where current=1";
+		$result=$conn->query($getCurrQues);
+		$quesData=$result->fetch_assoc();
+		if($data['answer']==$quesData['correct_option'])
+		{
+			$score=$conn->query("SELECT score FROM Members WHERE id=".$data['id'])->fetch_assoc();
+			//$score=$score+$quesData['points'];
+			$score['score']=$score['score']+10;
+			echo $score['score'];
+			$conn->query("UPDATE Members SET score=".$score['score']." where id=".$data['id']);
+		}
 	}
 ?>
