@@ -6,7 +6,7 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "miracle1234";
+	$password = "root";
 	$dbname = "myDB";
 
 			// Create connection
@@ -22,9 +22,21 @@
 
 	if($_SERVER['REQUEST_METHOD']=="POST")
 	{
-		$data = array("id"=>"");
+		$data = array("id"=>"","todo"=>"");
 		$data['id']=test_input($_POST['id']);
-		checkMember($data, $conn);
+		$data['todo']=test_input($_POST['todo']);
+		if($data['todo']=='check')
+		{
+			checkMember($data, $conn);
+		}
+		else
+		{
+			$data2 = array("id"=>"", "answer"=>"");
+			$data2['id']=test_input($_POST['id']);
+			$data2['answer']=test_input($_POST['answer']);
+			enable($data2, $conn);
+			updateScore($data2, $conn);
+		}
 	}
 
 	function test_input($data)
@@ -54,5 +66,24 @@
 			printf("Error: %s\n",$conn->error);
 		}
 		$conn->close();
+	}
+		function enable($data,$conn)
+	{
+		$disableButton="UPDATE Members SET button_status=0 where id=".$data['id'];
+		$result=$conn->query($disableButton);
+	}
+	function updateScore($data,$conn)
+	{
+		$getCurrQues="SELECT correctans, points FROM Questions where current=1";
+		$result=$conn->query($getCurrQues);
+		$quesData=$result->fetch_assoc();
+		if($data['answer']==$quesData['correctans'])
+		{
+			$score=$conn->query("SELECT score FROM Members WHERE id=".$data['id'])->fetch_assoc();
+			//$score=$score+$quesData['points'];
+			$score['score']=$score['score']+10;
+			echo $score['score'];
+			$conn->query("UPDATE Members SET score=".$score['score']." where id=".$data['id']);
+		}
 	}
 ?>

@@ -6,7 +6,7 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "miracle1234";
+	$password = "root";
 	$dbname = "myDB";
 
 			// Create connection
@@ -37,8 +37,17 @@
 		$Scores="SELECT id, firstname, lastname, score FROM Members ORDER BY score DESC";
 		if($result=$conn->query($Scores))
 		{
-			$scores=$result->fetch_all();
-			echo json_encode($scores);
+			//$scores=$result->fetch_all();
+			$rows = array();
+			while ($row = $result->fetch_assoc()) {
+
+			    $rows[] = $row;
+
+			}
+
+			//return $rows;
+			echo json_encode($rows);
+			//file_put_contents("errorF.txt", json_encode($rows));
 			$result->close();
 		} else {
 			printf("Error: %s\n",$conn->error);

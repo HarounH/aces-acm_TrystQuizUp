@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -11,26 +11,33 @@
 
 		var timer;
 		function timeOut(){
+			//console.log('i called timeout');
 			timer = setTimeout(timeOut , 1000);
+			//console.log("1");
 			$.post("scores.php",
 				{getscores:"scores"},
+				
 				function(data,status){
+					//console.log("2");
 					var obj = jQuery.parseJSON(data);
-					console.log(data);
+					//console.log("3");
+					//console.log(data);
+					//console.log("4");
+
 					//alert(obj[1]);
 					var x=1;
 					$("#ranks").html("");
 					while(x<=obj.length)
 					{
 						var row = "<tr><th>"+x+"</th>"+
-										"<td>"+obj[x-1][0].toString()+"</td>"+
-										"<td>"+obj[x-1][1]+obj[x-1][2]+"</td>"+
-										"<td>"+obj[x-1][3]+"</td></tr>";
+										"<td>"+obj[x-1]['id']+"</td>"+
+										"<td>"+obj[x-1]['firstname']+" " + obj[x-1]['lastname']+"</td>"+
+										"<td>"+obj[x-1]['score']+"</td></tr>";
 						$("#ranks").append(row);
 						x=x+1;
 					}
 
-			});
+				});
 		}
 
 		$(document).ready(function(){

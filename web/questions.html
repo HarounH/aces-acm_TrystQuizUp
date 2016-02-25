@@ -11,7 +11,13 @@
 	<script>
 		$(document).ready(function(){ 
 			var x=1;
+
 		 	$("#nextqs").click(function(){ //send signal to polling.php and ask nextquestion and options from question.php
+		 		console.log('i clicked on next qs');
+		 		if(x>=38)//no more than 38 qs
+		 		{
+		 			x=38;
+		 		}
 			  	$.post("questions.php",
 			  		{qnum:x},
 			  		function(data,status)

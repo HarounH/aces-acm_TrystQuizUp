@@ -14,7 +14,8 @@
 		function timeOut(){
 			timer = setTimeout(timeOut , 500);
 			$.post("polling.php",
-				{id:window.name},
+				{id:window.name,
+				todo:"check"},
 				function(data,status){
 					if(data=="no"){
 			  //enable the buttons
@@ -33,15 +34,20 @@
 
 		
 		$(document).ready(function(){
+			$(".option").addClass('btn-disabled');
+			$(".option").attr('disabled', 'disabled');
+			$(".option").prop('disabled', true);	
 			timer = setTimeout(timeOut , 500);
 			$(".option").click(function(){
 				$(".option").addClass('btn-disabled');
 				$(".option").attr('disabled', 'disabled');
 				$(".option").prop('disabled', true);
-				$.post("reply.php",
+				$.post("polling.php",
 					{answer:this.name,
-					id:window.name},
-					function(data,status){
+					id:window.name,
+					todo:"disable"},
+					function(data,status)
+					{
 						console.log(data);
 						$("#stage").html("<p>"+"Received"+"</p>");
 					}
