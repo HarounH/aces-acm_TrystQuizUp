@@ -1,5 +1,5 @@
 # aces-acm_TrystQuizUp
-The Application made by aces-acm for their tryst quiz up event.
+The Application made by aces-acm for their tryst quiz up event. It is meant to hold an onsite cum online event where in players, however many, see questions and realtime scores of themselves on a large sceen in front of them and open a buttons tab in their smartphones, tablets or laptops to answer the questions on-screen.
 
 DATABASE SETUP:-
 1. Make a database in mysql with the name 'myDB'
