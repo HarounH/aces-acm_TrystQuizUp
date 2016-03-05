@@ -1,0 +1,84 @@
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (301,'Tarun','Gupta','abcd','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (302,'Madhur','Singhal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (303,'Divyansh','Shukla','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (304,'Ashish','Rai','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (305,'Kunal','Aggarwal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (306,'Kartik','Goyal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (307,'Shobhit','Jain','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (308,'Ayush','Gupta','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (309,'Rishabh','Sikka','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (310,'Satvik','Narang','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (201,'Diksha','Bamboriya','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (202,'Twinkle','Janajal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (203,'Sahitya','Sharma','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (204,'Arun','Singh','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (205,'Sumit','Banerjee','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (206,'Rishil','Antony','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (207,'Nidhi','Ojha','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (208,'Anubhav','Thakur','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (209,'Saurabh','Singh','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (210,'Shubham','Gupta','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (211,'Vivek','Rai','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (212,'Shubham','Kumar','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (101,'Shubham','Garg','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (102,'Sampada','Bhatnagar','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (103,'Himani','Goyal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (104,'Narsi','Jindal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (105,'Navneet','Kaur','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (106,'Sonali','Goyal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (107,'Prince','-','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (108,'Manoj','Rawat','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (109,'Navdeep','Singh','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (110,'Shubham','Sagar','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (111,'Chetan','Junagale','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (401,'Nikhil','Goyal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (402,'Mukund','Mundhra','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (403,'Manu','Mitraan','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (403,'Manu','Mitraan','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (404,'Aditya','Kumar','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (405,'Nimish','Goyal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (406,'Suyash','Agrawal','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (407,'Akshit','Tyagi','[value-4]','[value-5]',0,0);
+
+INSERT INTO `Members`(`id`, `firstname`, `lastname`, `email`, `mobile`, `button_status`, `score`) VALUES (408,'Kapil','Ahuja','[value-4]','[value-5]',0,0);
+

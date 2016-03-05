@@ -1,0 +1,97 @@
+
+UPDATE `Questions` 
+	SET `question`='When was facebook formed?',`A`='2003',`B`='2004',`C`='2005',`D`='2006',`correctans`='B',`points`=10 WHERE `ID`=1;
+
+UPDATE `Questions` 
+	SET `question`='What was the original business of NOKIA?',`A`='Cable',`B`='Electricity',`C`='Pulp Mills',`D`='Telephones',`correctans`='C',`points`=10 WHERE `ID`=2;
+
+UPDATE `Questions` 
+	SET `question`='How much did the first Kindle Cost?',`A`='$299',`B`='$120',`C`='$489',`D`='$399',`correctans`='D',`points`=10 WHERE `ID`=3;
+
+UPDATE `Questions` 
+	SET `question`='What is the optimal time complexity of making a heap given an array of size n ?',`A`='O(n*loge(n))',`B`='O(loge(n))',`C`='O(n)',`D`='O(n^2)',`correctans`='C',`points`=10 WHERE `ID`=4;
+
+UPDATE `Questions` 
+	SET `question`='We are given a set of N distinct elements and an unlabeled binary tree with N nodes. In how many ways can we populate the tree with the given set so that it becomes a binary search tree?',`A`='n!',`B`='1',`C`='nC1',`D`='(2nCn)/(n+1)',`correctans`='B',`points`=10 WHERE `ID`=5;
+
+UPDATE `Questions` 
+	SET `question`='What is F1 Score?',`A`='2*precision*recall/(precision + recall)',`B`='precision*recall/(precision + recall)',`C`='(precision + recall)/2',`D`='(precision + recall)/(2*precision*recall)',`correctans`='A',`points`=10 WHERE `ID`=6;
+
+UPDATE `Questions` 
+	SET `question`='Horizontal scaling is an approach that is suggested as a solution to tackle the huge volume associated with Big Data. Which of the following is an approach under Horizontal scaling?',`A`='increasing the hard disk capacity',`B`='increasing the RAM of the system',`C`='increasing the number of systems on which the job is executed parallely',`D`='increasing the processing speed of the system',`correctans`='C',`points`=10 WHERE `ID`=7;
+
+UPDATE `Questions` 
+	SET `question`='Which of these cannot be represented using a single perceptron?',`A`='boolean NAND',`B`='boolean NOR',`C`='boolean XOR',`D`='boolean NOT',`correctans`='C',`points`=10 WHERE `ID`=8;
+
+UPDATE `Questions` 
+	SET `question`='Which of these is an Open Source Library for Machine Learning?',`A`='MatrixSink',`B`='TensorFlow',`C`='VectorReduce',`D`='MapBuffer',`correctans`='B',`points`=10 WHERE `ID`=9;
+
+UPDATE `Questions` 
+	SET `question`='Which of these was the program that beat the European Go Champion in 2015?',`A`='AlphaGo',`B`='GoChamp!',`C`='Zen',`D`='Crazy Stone',`correctans`='A',`points`=10 WHERE `ID`=10;
+
+UPDATE `Questions` 
+	SET `question`='An auto-associative neural network is:',`A`='a neural network that contains no loops',`B`='a neural network that contains feedback',`C`='a neural network that has only one loop',`D`='a single layer feed-forward neural network with pre-processing',`correctans`='B',`points`=10 WHERE `ID`=11;
+
+UPDATE `Questions` 
+	SET `question`='Which of the following does NOT use UDP?',`A`='DNS',`B`='DHCP',`C`='RIP',`D`='SMTP',`correctans`='D',`points`=10 WHERE `ID`=12;
+
+UPDATE `Questions` 
+	SET `question`='If a class B network on the Internet has a subnet mask of 255.255.248.0, what is the maximum number of hosts per subnet?',`A`='1022',`B`='1024',`C`='2046',`D`='2048',`correctans`='C',`points`=10 WHERE `ID`=13;
+
+UPDATE `Questions` 
+	SET `question`='What is your physical address?',`A`='127.0.0.1',`B`='IP Address',`C`='MAC Address',`D`='Gateway',`correctans`='C',`points`=10 WHERE `ID`=14;
+
+UPDATE `Questions` 
+	SET `question`='Which OSI Layer deals with physical addressing of device?',`A`='Ethernet Layer',`B`='IP Layer',`C`='Physical Layer',`D`='Data Link Layer',`correctans`='D',`points`=10 WHERE `ID`=15;
+
+UPDATE `Questions` 
+	SET `question`='What port does FTP use?',`A`='80',`B`='8080',`C`='21',`D`='3074',`correctans`='C',`points`=10 WHERE `ID`=16;
+
+UPDATE `Questions` 
+	SET `question`='Heartbleed was caused due to poorly written code in:',`A`='ClosedSSL',`B`='OpenSSL',`C`='MySQL',`D`='OpenSLL',`correctans`='B',`points`=10 WHERE `ID`=17;
+
+UPDATE `Questions` 
+	SET `question`='Which of these is the full form of IDEA, a symmetric-key block cipher?',`A`='International Data Encryption Algorithm',`B`='Internet Data Encryption Algorithm',`C`='Integer Data Encryption Algorithm',`D`='Insider Data Encryption Algorithm',`correctans`='A',`points`=10 WHERE `ID`=18;
+
+UPDATE `Questions` 
+	SET `question`='Which algorithm does HTTPS use for encryption?',`A`='RSA',`B`='TCP',`C`='Euclidean Modulo',`D`='Network Flow',`correctans`='A',`points`=10 WHERE `ID`=19;
+
+UPDATE `Questions` 
+	SET `question`='Which is a “Read-Only” type of memory?',`A`='L1 Cache',`B`='RAM',`C`='ROM',`D`='DRAM',`correctans`='C',`points`=10 WHERE `ID`=20;
+
+UPDATE `Questions` 
+	SET `question`='Which of these is not a processor for phones?',`A`='Nvidia Tegra',`B`='Samsung Exynos',`C`='Intel Atom',`D`='AMD BlueChip',`correctans`='D',`points`=10 WHERE `ID`=21;
+
+UPDATE `Questions` 
+	SET `question`='Which of these is not a serial communications architecture?',`A`='PCIExpress',`B`='PCMCIA',`C`='SBus',`D`='SATA',`correctans`='B',`points`=10 WHERE `ID`=22;
+
+UPDATE `Questions` 
+	SET `question`='A process executes the code
+		  fork ();
+		  fork ();
+		  fork ();
+		The total number of child processes created is',`A`='3',`B`='4',`C`='7',`D`='8',`correctans`='C',`points`=10 WHERE `ID`=23;
+
+UPDATE `Questions` 
+	SET `question`='Which of these is not a filesystem?',`A`='ext3',`B`='minix',`C`='NTFS',`D`='NIC',`correctans`='D',`points`=10 WHERE `ID`=24;
+
+UPDATE `Questions` 
+	SET `question`='What is the swap space in the disk used for?',`A`='Storing the super-block.',`B`='Dumping RAM for hibernate / deep sleep',`C`='Saving process data (extending RAM)',`D`='Storing device drivers',`correctans`='C',`points`=10 WHERE `ID`=25;
+
+UPDATE `Questions` 
+	SET `question`='What do the Therac-25 and Cobalt-60 have in common?',`A`='They are elements on the periodic table',`B`='They contained bugs that resulted in the death of patients',`C`='They were vulnerabilities which were exploited to steal credit cards',`D`='They caused the Stock Markets to crash due to bugs contained in them',`correctans`='B',`points`=10 WHERE `ID`=26;
+
+UPDATE `Questions` 
+	SET `question`='Which of the following esoteric languages use MIDI files as source code?',`A`='Velato',`B`='INTERCAL',`C`='Befunge',`D`='Piet',`correctans`='A',`points`=10 WHERE `ID`=27;
+
+UPDATE `Questions` 
+	SET `question`='Which of the following languages was created by Jane Street?',`A`='Java',`B`='LOLCODE',`C`='OCaML',`D`='SML',`correctans`='C',`points`=10 WHERE `ID`=28;
+
+UPDATE `Questions` 
+	SET `question`='Which of the following is a famous software company that specializes in data analysis?',`A`='Palantir',`B`='Y Combinator',`C`='Tesla',`D`='Debian',`correctans`='A',`points`=10 WHERE `ID`=29;
+
+UPDATE `Questions` 
+	SET `question`='What is Baidu, Inc?',`A`='A phone manufacturer',`B`='Web Services Provider',`C`='Networking Equipment Manufacturer',`D`='Game Development Studio',`correctans`='B',`points`=10 WHERE `ID`=30;
+
+UPDATE `Questions` 
+	SET `question`='When was Nintendo founded?',`A`='2004',`B`='1996',`C`='1889',`D`='1969',`correctans`='C',`points`=10 WHERE `ID`=31;
